@@ -3,7 +3,7 @@
 //Put it inside: "~/Sockets/TCPServer" directory.
 
 /*
- Here is depicted the workflow for the TCP client:
+ Here is depicted the workflow for the TCP server:
  
  +---------------+
  |               |
