@@ -19,9 +19,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// The following are for definition of socket functions and API
 #include <sys/types.h>
 #include <sys/socket.h>
 
+//... for the structures we need to store address infos
 #include <netinet/in.h>
 
 int main () {
