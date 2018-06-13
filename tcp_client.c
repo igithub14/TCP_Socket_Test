@@ -1,6 +1,20 @@
 //Run it on a Linux System.
 //Put it inside: "~/Sockets/TCPClient" directory.
 
+/*
+   socket()   Create a socket through a call to socket()
+      |
+      |
+     . .
+      .
+   connect()  Connect to a remote address through a call to connect()
+      |
+      |
+     . .
+      .
+    recv()    Starts receiving data
+*/ 
+
 //We want to include some stuff from stdio and stdlib
 #include <stdio.h>
 #include <stdlib.h>
