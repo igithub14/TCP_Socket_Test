@@ -2,6 +2,8 @@
 //Put it inside: "~/Sockets/TCPClient" directory.
 
 /*
+ Here is depicted the workflow for the TCP client:
+ 
    socket()   Create a socket through a call to socket()
       |
       |
