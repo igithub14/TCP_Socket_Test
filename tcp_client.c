@@ -56,17 +56,27 @@ int main () {
   // NB: connect() returns an integer that lets us know if the connection was successful or not.
   int connection_status = connect (network_socket, (struct sockaddr *) &server_address, sizeof(server_address)); 
   
-  //then now we test if the connection was successful or not
+  // then now we test if the connection was successful or not
   // if connection_status is zero then it was ok; if -1 something went wrong.
   if (connection_status == -1) {
     printf ("There was an error making the connection to the remote socket.\n\n");
   }
   
-  //
+  // Now we can start sending or receiving data from the server.
+  // Let's see recv()  function.
+  // the first param we pass to recv() is the socket
+  // second we pass a string we want to use to send back data from the server. We pass the address of this string &serve_response.
+  // the third param is the size of the server response (of the string)
+  // is an options parameter.
   char server_response[256];
   recv (network_socket, &serve_response, sizeof (serve_response), 0);
   
-  //...
+  // then we just print the data we got back from the server
+  print ("The server sent the data: %s\n", server_response);
+   
+  // now we can close the socket by useing the close funcion
+  // this function takes the socket as a parameter
+  close(network_socket);
   
   return 0;
 }
