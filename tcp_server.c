@@ -10,12 +10,18 @@
       |
      . .
       .
-   connect()  Connect to a remote address through a call to connect()
+   bind()  bind the socket to an IP and Port through bind()
       |
       |
      . .
       .
-    recv()    Starts receiving data
+    listen()    the server can listen for connections thanks to listen()
+      |
+      |
+     . .
+      .
+    accept() the server can accept the connection through accept() and then send() or recv() data 
+             to the other socket he's connected to
 */ 
 
 //We want to include some stuff from stdio and stdlib
