@@ -30,13 +30,23 @@ int main () {
     
   //Definition of a socket:
   int network_socket;
-  network_socket = socket(AF_INET, SOCK_STREAM, 0);
+  network_socket = socket(AF_INET, SOCK_STREAM, 0); // call to the socket() function
+                                                    // AF_INET is the socket Domain
+                                                    // SOCKET_STREAM is the type of the socket (eg: TCP or UDP... In this case it is TCP)
+                                                    // 0 means we want to use the defaut protocol (TCP) 
+                                                    // then we have create the socket.
   
-  //definition of an address for the socket:
+  // Now we want to create the other end of the communication, to which we want to Connect. 
+  // Then we want to call the connect() function. 
+  // Before to call the connect functionwe need to specify the address we want to connect to; this is why we need netinet.in.h 
+  // who contains a Structure in which we can define IP and Port numbers.
+  // Definition of an address Structure for the socket:
   struct sockaddr_in server_address;
-  server_address.sin_family = AF_INET;
-  server_address.sin_port = htons(9002);
-  server_address.sin_addr.s_addr = INADDR_ANY;
+  //sin_family and  and sin_port are some of the fields that constitute the struct
+  server_address.sin_family = AF_INET; // type of the address
+  server_address.sin_port = htons(9002); // we could pass an integer, but better to use the conversion function htons(). 
+                                         // 9002 is a port numer that is not used by the OS. 
+  server_address.sin_addr.s_addr = INADDR_ANY; //here we specify the actual address we want to connect to.
   
   int connection_status = connect (network_socket, (struct sockaddr *) &server_address, sizeof(server_address));
   
