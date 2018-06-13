@@ -47,7 +47,10 @@ int main () {
   server_address.sin_port = htons(9002); // we could pass an integer, but better to use the conversion function htons(). 
                                          // 9002 is a port numer that is not used by the OS. 
   server_address.sin_addr.s_addr = INADDR_ANY; //here we specify the actual address we want to connect to.
+                                               // INADDR_ANY == 0.0.0.0
   
+   // then we have defined the address we want to connect to. 
+   
   int connection_status = connect (network_socket, (struct sockaddr *) &server_address, sizeof(server_address));
   
   //test
