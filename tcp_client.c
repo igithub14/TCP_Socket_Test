@@ -49,11 +49,15 @@ int main () {
   server_address.sin_addr.s_addr = INADDR_ANY; //here we specify the actual address we want to connect to.
                                                // INADDR_ANY == 0.0.0.0
   
-   // then we have defined the address we want to connect to. 
-   
-  int connection_status = connect (network_socket, (struct sockaddr *) &server_address, sizeof(server_address));
+  // then we have defined the address we want to connect to. So now it make sense to kalling the connect() function.
+  // the first param we pass to connect() is the socket network_socket.
+  // then we need to cast the server address struct to a slightly different struck 
+  // then we pass the size of the address. 
+  // NB: connect() returns an integer that lets us know if the connection was successful or not.
+  int connection_status = connect (network_socket, (struct sockaddr *) &server_address, sizeof(server_address)); 
   
-  //test
+  //then now we test if the connection was successful or not
+  // if connection_status is zero then it was ok; if -1 something went wrong.
   if (connection_status == -1) {
     printf ("There was an error making the connection to the remote socket.\n\n");
   }
