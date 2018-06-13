@@ -5,23 +5,36 @@
 /*
  Here is depicted the workflow for the TCP client:
  
-   socket()   Create a socket through a call to socket()
-      |
-      |
-     . .
-      .
-   bind()  bind the socket to an IP and Port through bind()
-      |
-      |
-     . .
-      .
-    listen()    the server can listen for connections thanks to listen()
-      |
-      |
-     . .
-      .
-    accept() the server can accept the connection through accept() and then send() or recv() data 
-             to the other socket he's connected to
+ +---------------+
+ |               |
+ |   socket()    |  Create a socket through a call to socket()
+ |               |
+ +---------------+
+         |
+         |
+         v
+ +---------------+
+ |               |
+ |    bind()     |   Bind the socket to an IP and Port through bind()
+ |               |
+ +---------------+      
+         |
+         |
+         v
+ +---------------+
+ |               |
+ |   listen()    |   The server can listen for connections thanks to listen()
+ |               |
+ +---------------+
+         |
+         |
+         v
+ +---------------+
+ |               |
+ |    accept()   |   The server can accept the connection through accept() and then send() or recv() data 
+ |               |   to the other socket he's connected to
+ +---------------+
+ 
 */ 
 
 #include <stdio.h>
