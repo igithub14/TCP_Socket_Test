@@ -4,17 +4,28 @@
 /*
  Here is depicted the workflow for the TCP client:
  
-   socket()   Create a socket through a call to socket()
-      |
-      |
-     . .
-      .
-   connect()  Connect to a remote address through a call to connect()
-      |
-      |
-     . .
-      .
-    recv()    Starts receiving data
+ +---------------+
+ |               |
+ |   socket()    |  Create a socket through a call to socket()
+ |               |
+ +---------------+
+         |
+         |
+         v
+ +---------------+
+ |               |
+ |   connect()   |  Connect to a remote address through a call to connect()
+ |               |
+ +---------------+      
+         |
+         |
+         v
+ +---------------+
+ |               |
+ |    recv()     |  Starts receiving data
+ |               |
+ +---------------+
+       
 */ 
 
 //We want to include some stuff from stdio and stdlib
