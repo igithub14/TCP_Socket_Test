@@ -52,6 +52,14 @@ int main () {
  
  listen(server_socket, 5);
  
+ int client_socket;
+ client_socket = accept (server_socket, NULL, NULL);
+ 
+ //send the message
+ send (client_socket, server_message, sizeof(server_message), 0);
+ 
+ //close the socket
+ close (server_socket);
  return 0;
 }
     
