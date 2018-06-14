@@ -11,7 +11,6 @@
  |               |
  +---------------+
          |
-         |
          v
  +---------------+
  |               |
@@ -19,24 +18,21 @@
  |               |
  +---------------+      
          |
-         |
-         v
+         V
  +---------------+
  |               |
  |   listen()    |   The server can listen for connections thanks to listen()
  |               |
  +---------------+
          |
-         |
-         v
+         V
  +---------------+
  |               |
  |    accept()   |   The server can accept the connection through accept()...  
  |               |   
  +---------------+
-          |
          |
-         v
+         V
  +---------------+
  |               |
  | send()/recv() |  ... and then send() or recv() data to the other socket he's connected to
