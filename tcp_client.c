@@ -49,10 +49,10 @@ int main () {
                                                        0 means we want to use the defaut protocol (TCP) 
                                                        then we have create the socket.*/
   
-  // Now we want to create the other end of the communication, to which we want to Connect. 
-  // Then we want to call the connect() function. 
-  // Before to call the connect functionwe need to specify the address we want to connect to; this is why we need netinet.in.h 
-  // who contains a Structure in which we can define IP and Port numbers.
+  /* Now we want to create the other end of the communication, to which we want to Connect. 
+     Then we want to call the connect() function. 
+     Before to call the connect functionwe need to specify the address we want to connect to; this is why we need netinet.in.h 
+     who contains a Structure in which we can define IP and Port numbers. */
   // Definition of an address Structure for the socket:
   struct sockaddr_in server_address;
   //sin_family and  and sin_port are some of the fields that constitute the struct
@@ -62,11 +62,11 @@ int main () {
   server_address.sin_addr.s_addr = INADDR_ANY; //here we specify the actual address we want to connect to.
                                                // INADDR_ANY == 0.0.0.0
   
-  // then we have defined the address we want to connect to. So now it make sense to kalling the connect() function.
-  // the first param we pass to connect() is the socket network_socket.
-  // then we need to cast the server address struct to a slightly different struck 
-  // then we pass the size of the address. 
-  // NB: connect() returns an integer that lets us know if the connection was successful or not.
+  /* then we have defined the address we want to connect to. So now it make sense to kalling the connect() function.
+     the first param we pass to connect() is the socket network_socket.
+     then we need to cast the server address struct to a slightly different struck 
+     then we pass the size of the address. 
+     NB: connect() returns an integer that lets us know if the connection was successful or not.*/
   int connection_status = connect (network_socket, (struct sockaddr *) &server_address, sizeof(server_address)); 
   
   // then now we test if the connection was successful or not
