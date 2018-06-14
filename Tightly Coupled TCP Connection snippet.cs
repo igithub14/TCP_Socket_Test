@@ -16,16 +16,14 @@
 
 //...
 String hostName = "www.bank.com"; /* The IPHostEntry class associates a Domain Name System (DNS) host name 
-                                     with an array of aliases and an array of matching IP addresses.
-                                  */
+                                     with an array of aliases and an array of matching IP addresses.*/
 
 
 int port = 80; 
  
                                      
 IPHostEntry hostInfo = Dns.GetHostByName(hostName); /* This row queries the DNS database for information 
-                                                       on the host www.contoso.com and returns the information in an IPHostEntry instance.   
-                                                    */
+                                                       on the host www.contoso.com and returns the information in an IPHostEntry instance. */
 IPAddress address = hostInfo.AddressList[0]; /*Gets IP address from AddresList[] and assigns it to address*/
  
 IPEndPoint endpoint = new IPEndPoint(address, port); /* Represents a network endpoint as an IP address and a Port number*/
