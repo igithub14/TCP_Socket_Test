@@ -15,6 +15,7 @@
   we want to make a connection that can be independent from the machine we are connecting to.
   Also, we are using TCP wich is connection oriented, then we are establishing temporal dependencies between the two machines.
   which must be available at the same time (which is an obvious constraint).
+  Lastly, we are imposing a very strict data format.
 */
 
 //...
