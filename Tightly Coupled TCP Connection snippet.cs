@@ -1,16 +1,25 @@
 
-//...
-//This is a C# code snippet.
+//... This is a C# code snippet.
 
 /*
   This snippet depicts how a Client can invoke a remote function via a TCP conneciton.
   This procedure is only reasonable on a tightly coupled system.
+  The scenario is that of a front-end web client invoking a remote function on a back-end system.
+  Eg: Bank system. The client invokes the remote function to make a fund transfer.
 */
 
 //...
-String hostName = "www.eaipatterns.com"; int port = 80; 
+String hostName = "www.bank.com"; /* The IPHostEntry class associates a Domain Name System (DNS) host name 
+                                     with an array of aliases and an array of matching IP addresses.
+                                  */
+
+
+int port = 80; 
  
-IPHostEntry hostInfo = Dns.GetHostByName(hostName); IPAddress address = hostInfo.AddressList[0]; 
+                                     
+IPHostEntry hostInfo = Dns.GetHostByName(hostName); IPAddress address = hostInfo.AddressList[0]; /* This row queries the DNS database for information 
+                                                                                                    on the host www.contoso.com and returns the information in an IPHostEntry instance.   
+                                                                                                 */
  
 IPEndPoint endpoint = new IPEndPoint(address, port); 
  
