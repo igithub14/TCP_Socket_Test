@@ -77,10 +77,11 @@ int main () {
  client_socket = accept (server_socket, NULL, NULL); /* the client_socket is then the result 
                                                         of the accept() of the server_socket. So now we have a 2-way connection
                                                         between the server and the client*/
- // now we can start sending data to the client socket
  
  //send the message
- send (client_socket, server_message, sizeof(server_message), 0);
+ send (client_socket, server_message, sizeof(server_message), 0); /* now we can start sending data to the client socket 
+                                                                     the first param is the client_socket, the second 
+                                                                     is the mesage we whant to send from the server*/
  
  //close the socket
  close (server_socket);
