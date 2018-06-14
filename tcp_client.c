@@ -43,11 +43,11 @@ int main () {
     
   //Definition of a socket:
   int network_socket;
-  network_socket = socket(AF_INET, SOCK_STREAM, 0); // call to the socket() function
-                                                    // AF_INET is the socket Domain
-                                                    // SOCKET_STREAM is the type of the socket (eg: TCP or UDP... In this case it is TCP)
-                                                    // 0 means we want to use the defaut protocol (TCP) 
-                                                    // then we have create the socket.
+  network_socket = socket(AF_INET, SOCK_STREAM, 0); /* call to the socket() function
+                                                       AF_INET is the socket Domain
+                                                       SOCKET_STREAM is the type of the socket (eg: TCP or UDP... In this case it is TCP)
+                                                       0 means we want to use the defaut protocol (TCP) 
+                                                       then we have create the socket.*/
   
   // Now we want to create the other end of the communication, to which we want to Connect. 
   // Then we want to call the connect() function. 
