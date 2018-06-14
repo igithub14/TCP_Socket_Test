@@ -11,7 +11,8 @@
   we used the BitConverter class; but the internal representation of an integer number varies with computer systems 
   (eg: the representation can be 32bit or 64bit). Also, some systems store their numbers in big-endian 
   while others store them in little-endian format. 
-  A second problem with this approach is that we hardcode the location of the remote machine @@@4zero
+  A second problem with this approach is that we hardcode the location of the remote machine; this can be tedious, so 
+  we want to make a connection that can be independent from the machine we are connecting to.
 */
 
 //...
