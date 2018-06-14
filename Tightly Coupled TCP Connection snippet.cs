@@ -24,7 +24,9 @@ IPAddress address = hostInfo.AddressList[0]; /*Gets IP address from AddresList[]
  
 IPEndPoint endpoint = new IPEndPoint(address, port); /* Represents a network endpoint as an IP address and a Port number*/
  
-Socket socket = new Socket(address.AddressFamily, SocketType.Stream, ProtocolType.Tcp); socket.Connect(endpoint); 
+Socket socket = new Socket(address.AddressFamily, SocketType.Stream, ProtocolType.Tcp); /* The Socket class allows you to configure your Socket. 
+                                                                                           AddressFamiliy allows to select the right addressing schema (dunno what it really is). */
+socket.Connect(endpoint); 
  
 byte[] amount = BitConverter.GetBytes(1000); byte[] name   = Encoding.ASCII.GetBytes("Joe");
 
