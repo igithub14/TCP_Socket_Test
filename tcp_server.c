@@ -62,8 +62,8 @@ int main () {
  int server_socket; //this Integer holds the return value of the socket call
  server_socket = socket(AF_INET, SOCK_STREAM, 0);
  
- // define the server address
- struct sockaddr_in_server_address;
+ // define the server address 
+ struct sockaddr_in_server_address; //@@@till here
  server_adress.sin.family = AF_INET;
  server_adress.sin_port = htons(9002);
  server_adress.sin_addr.s_addr = INADDR_ANY;
