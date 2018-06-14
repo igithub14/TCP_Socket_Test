@@ -31,8 +31,16 @@
          v
  +---------------+
  |               |
- |    accept()   |   The server can accept the connection through accept() and then send() or recv() data 
- |               |   to the other socket he's connected to
+ |    accept()   |   The server can accept the connection through accept()...  
+ |               |   
+ +---------------+
+          |
+         |
+         v
+ +---------------+
+ |               |
+ | send()/recv() |  ... and then send() or recv() data to the other socket he's connected to
+ |               |   
  +---------------+
  
 */ 
