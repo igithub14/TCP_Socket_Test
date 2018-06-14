@@ -82,7 +82,7 @@ int main () {
   // the third param is the size of the server response (of the string)
   // is an options parameter.
   char server_response[256];
-  recv (network_socket, &serve_response, sizeof (serve_response), 0);
+  recv (network_socket, &server_response, sizeof (serve_response), 0);
   
   // then we just print the data we got back from the server
   print ("The server sent the data: %s\n", server_response);
