@@ -59,7 +59,7 @@ int main () {
  char server_message[256] = "You have rached the server";
  
  //cresate the server socket
- int server_socket;
+ int server_socket; //this Integer holds the return value of the socket call
  server_socket = socket(AF_INET, SOCK_STREAM, 0);
  
  // define the server address
