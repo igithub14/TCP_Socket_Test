@@ -6,6 +6,12 @@
   This procedure is only reasonable on a tightly coupled system.
   The scenario is that of a front-end web client invoking a remote function on a back-end system.
   Eg: Bank system. The client invokes the remote function to make a fund transfer.
+  Notes: the use of TCP allows the independence from the OS type. However, the platform independence 
+  works only for simple messages: byte streams.  In order to convert our data into a byte stream 
+  we used the BitConverter class; but the internal representation of an integer number varies with computer systems 
+  (eg: the representation can be 32bit or 64bit). Also, some systems store their numbers in big-endian 
+  while others store them in little-endian format. 
+  A second problem with this approach is that we hardcode the location of the remote machine @@@4zero
 */
 
 //...
