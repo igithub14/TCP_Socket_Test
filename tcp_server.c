@@ -73,7 +73,7 @@ int main () {
  
  listen(server_socket, 5); //start listening for connections. The second param is a backlog.
  
- int client_socket;
+ int client_socket; //this Integer holds the client socket
  client_socket = accept (server_socket, NULL, NULL);
  
  //send the message
