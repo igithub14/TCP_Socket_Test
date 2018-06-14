@@ -85,7 +85,7 @@ int main () {
   recv (network_socket, &server_response, sizeof (serve_response), 0);
   
   // then we just print the data we got back from the server
-  print ("The server sent the data: %s\n", server_response);
+  printf ("The server sent the data: %s\n", server_response);
    
   // now we can close the socket by useing the close funcion
   // this function takes the socket as a parameter
