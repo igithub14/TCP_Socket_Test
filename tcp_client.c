@@ -1,5 +1,5 @@
-//Run it on a Linux System.
-//Put it inside: "~/Sockets/TCPClient" directory.
+/* Run it on a Linux System.
+   Put it inside: "~/Sockets/TCPClient" directory.*/
 
 /*
  Here is depicted the workflow for the TCP client:
