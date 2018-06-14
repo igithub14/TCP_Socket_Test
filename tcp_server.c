@@ -63,15 +63,15 @@ int main () {
  server_socket = socket(AF_INET, SOCK_STREAM, 0);
  
  // define the server address 
- struct sockaddr_in_server_address; //@@@till here
+ struct sockaddr_in server_address; 
  server_adress.sin.family = AF_INET;
  server_adress.sin_port = htons(9002);
- server_adress.sin_addr.s_addr = INADDR_ANY;
+ server_adress.sin_addr.s_addr = INADDR_ANY; // actual address
  
- //bind the socket to our specified IP and port
- bind (server_socket, (struct sockaddr*) &server_address, sizeof(server_address));
+ //call the bind the socket to our specified IP and port. That is to bind the socket to our specified IP and Port
+ bind (server_socket, (struct sockaddr*) &server_address, sizeof(server_address)); //@@@till here
  
- listen(server_socket, 5);
+ listen(server_socket, 5); //start listening for connections. The second param is a backlog.
  
  int client_socket;
  client_socket = accept (server_socket, NULL, NULL);
