@@ -17,6 +17,6 @@ Then:
   • instead of sending information directly to a specific machine we should send it to an addressable 'channel'
   • enhance the channel to Queue up sent requests until the network and the receiving system are ready (IMPORTANT). 
     That is why we need to wrap data inside Messages.
-  • 
+  •  we also need some way to make data format transformations inside the channel, using transformers
   
   @@@
