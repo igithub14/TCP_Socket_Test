@@ -14,7 +14,7 @@
   A second problem with this approach is that we hardcode the location of the remote machine; this can be tedious, so 
   we want to make a connection that can be independent from the machine we are connecting to.
   Also, we are using TCP wich is connection oriented, then we are establishing temporal dependencies between the two machines.
-  which must be available at the same time.
+  which must be available at the same time (which is an obvious constraint).
 */
 
 //...
