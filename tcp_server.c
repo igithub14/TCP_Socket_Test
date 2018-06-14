@@ -71,10 +71,13 @@ int main () {
  //call the bind the socket to our specified IP and port. That is to bind the socket to our specified IP and Port
  bind (server_socket, (struct sockaddr*) &server_address, sizeof(server_address)); 
  
- listen(server_socket, 5); //start listening for connections. The second param is a backlog. @@@ till here
+ listen(server_socket, 5); //start listening for connections. The second param is a backlog. 
  
  int client_socket; //this Integer holds the client socket
- client_socket = accept (server_socket, NULL, NULL);
+ client_socket = accept (server_socket, NULL, NULL); /* the client_socket is then the result 
+                                                        of the accept() of the server_socket. So now we have a 2-way connection
+                                                        between the server and the client*/
+ 
  
  //send the message
  send (client_socket, server_message, sizeof(server_message), 0);
