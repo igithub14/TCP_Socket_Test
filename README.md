@@ -15,7 +15,8 @@ Referring to the file , I must consider the following dependencies:
 Then:
   • I can use a data format that is self-describing and platform independent, such as XML
   • instead of sending information directly to a specific machine we should send it to an addressable 'channel'
-  • enhance the channel to QUEUE up sent requests until the network and the receiving system are ready (IMPORTANT)
+  • enhance the channel to Queue up sent requests until the network and the receiving system are ready (IMPORTANT). 
+    That is why we need to wrap data inside Messages.
   • 
   
   @@@
