@@ -55,7 +55,7 @@
 
 int main () {
  
- //define a strring to hold the data to be sent to the client
+ //define a string to hold the data to be sent to the client
  char server_message[256] = "You have rached the server";
  
  //cresate the server socket
