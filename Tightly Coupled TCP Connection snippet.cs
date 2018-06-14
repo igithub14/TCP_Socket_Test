@@ -34,4 +34,4 @@ byte[] name = Encoding.ASCII.GetBytes("Joe");
 int bytesSent = socket.Send(amount); /* the method socket.send() sends syncronously data to a connected object on the remote host*/
 bytesSent    += socket.Send(name); 
  
-socket.Close(); /*this method closes the TCP connection*/
+socket.Close(); /*this method closes the TCP connection to the remote host, and releases the resources associated to the Socket*/
