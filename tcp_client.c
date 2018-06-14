@@ -78,7 +78,7 @@ int main () {
   // Now we can start sending or receiving data from the server.
   // Let's see recv()  function.
   // the first param we pass to recv() is the socket
-  // second we pass a string we want to use to send back data from the server. We pass the address of this string &serve_response.
+  // second we pass a string we want to use to send back data from the server. We pass the address of this string &server_response.
   // the third param is the size of the server response (of the string)
   // is an options parameter.
   char server_response[256];
