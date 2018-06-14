@@ -11,7 +11,7 @@
  |               |
  +---------------+
          |
-         v
+         V
  +---------------+
  |               |
  |    bind()     |   Bind the socket to an IP and Port through bind()
