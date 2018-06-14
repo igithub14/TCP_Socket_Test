@@ -56,7 +56,7 @@
 int main () {
  
  //define a string to hold the data to be sent to the client
- char server_message[256] = "You have rached the server";
+ char server_message[256] = "You have reached the server";
  
  //cresate the server socket
  int server_socket; //this Integer holds the return value of the socket call
