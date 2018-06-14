@@ -5,7 +5,7 @@ The main goal is to make it possibile the communication between two heterogeneou
 
 In order to make the solution more loosely coupled I must remove all the dependencies one by one.
 
-Referring to the file , I must consider the following dependencies:
+Referring to the file *Tightly Coupled TCP Connection snippet.cs*, I must consider the following dependencies:
 
   • Platform Technology: internal representations of numbers and objects
   • Location: hard-coded machine addresses
