@@ -22,8 +22,7 @@ IPHostEntry hostInfo = Dns.GetHostByName(hostName); /* This row queries the DNS 
                                                     */
 IPAddress address = hostInfo.AddressList[0]; /*Gets IP address from AddresList[] and assigns it to address*/
  
-IPEndPoint endpoint = new IPEndPoint(address, port); /*
-                                                     */
+IPEndPoint endpoint = new IPEndPoint(address, port); /* Represents a network endpoint as an IP address and a Port number*/
  
 Socket socket = new Socket(address.AddressFamily, SocketType.Stream, ProtocolType.Tcp); socket.Connect(endpoint); 
  
