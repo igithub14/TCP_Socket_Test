@@ -17,11 +17,13 @@ String hostName = "www.bank.com"; /* The IPHostEntry class associates a Domain N
 int port = 80; 
  
                                      
-IPHostEntry hostInfo = Dns.GetHostByName(hostName); IPAddress address = hostInfo.AddressList[0]; /* This row queries the DNS database for information 
-                                                                                                    on the host www.contoso.com and returns the information in an IPHostEntry instance.   
-                                                                                                 */
+IPHostEntry hostInfo = Dns.GetHostByName(hostName); /* This row queries the DNS database for information 
+                                                       on the host www.contoso.com and returns the information in an IPHostEntry instance.   
+                                                    */
+IPAddress address = hostInfo.AddressList[0]; /*Gets IP address from AddresList[] and assigns it to address*/
  
-IPEndPoint endpoint = new IPEndPoint(address, port); 
+IPEndPoint endpoint = new IPEndPoint(address, port); /*
+                                                     */
  
 Socket socket = new Socket(address.AddressFamily, SocketType.Stream, ProtocolType.Tcp); socket.Connect(endpoint); 
  
