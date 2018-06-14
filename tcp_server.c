@@ -35,7 +35,7 @@
          V
  +---------------+
  |               |
- | send()/recv() |  ... and then send() or recv() data to the other socket he's connected to
+ | send()/recv() |  ... and then send() or recv() data to the other socket he's connected to.
  |               |   
  +---------------+
  
