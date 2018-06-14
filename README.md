@@ -7,9 +7,15 @@ In order to make the solution more loosely coupled I must remove all the depende
 
 Referring to the file , I must consider the following dependencies:
 
-  • Platform Technology: internal representations of numbers and objects \n
+  • Platform Technology: internal representations of numbers and objects
   • Location: hard-coded machine addresses
   • Time: all components have to be available at the same time  
   • Data Format: the list of parameters and their types must match 
   
+Then:
+  • I can use a data format that is self-describing and platform independent, such as XML
+  • instead of sending information directly to a specific machine we should send it to an addressable 'channel'
+  • 
+  • 
   
+  @@@
