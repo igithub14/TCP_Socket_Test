@@ -69,9 +69,9 @@ int main () {
  server_adress.sin_addr.s_addr = INADDR_ANY; // actual address
  
  //call the bind the socket to our specified IP and port. That is to bind the socket to our specified IP and Port
- bind (server_socket, (struct sockaddr*) &server_address, sizeof(server_address)); //@@@till here
+ bind (server_socket, (struct sockaddr*) &server_address, sizeof(server_address)); 
  
- listen(server_socket, 5); //start listening for connections. The second param is a backlog.
+ listen(server_socket, 5); //start listening for connections. The second param is a backlog. @@@ till here
  
  int client_socket; //this Integer holds the client socket
  client_socket = accept (server_socket, NULL, NULL);
