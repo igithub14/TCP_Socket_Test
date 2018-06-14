@@ -7,7 +7,7 @@ In order to make the solution more loosely coupled I must remove all the depende
 
 Referring to the file , I must consider the following dependencies:
 
-  • Platform Technology: internal representations of numbers and objects
+  • Platform Technology: internal representations of numbers and objects \n
   • Location: hard-coded machine addresses
   • Time: all components have to be available at the same time  
   • Data Format: the list of parameters and their types must match 
