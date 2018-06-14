@@ -26,10 +26,12 @@ IPEndPoint endpoint = new IPEndPoint(address, port); /* Represents a network end
  
 Socket socket = new Socket(address.AddressFamily, SocketType.Stream, ProtocolType.Tcp); /* The Socket class allows you to configure your Socket. 
                                                                                            AddressFamiliy allows to select the right addressing schema (dunno what it really is). */
-socket.Connect(endpoint); 
+socket.Connect(endpoint); /* Establishes a connection to the remote host*/
  
-byte[] amount = BitConverter.GetBytes(1000); byte[] name   = Encoding.ASCII.GetBytes("Joe");
+byte[] amount = BitConverter.GetBytes(1000); /* Converts the assigned data to a bytes matrix*/
+byte[] name = Encoding.ASCII.GetBytes("Joe");
 
-int bytesSent = socket.Send(amount); bytesSent    += socket.Send(name); 
+int bytesSent = socket.Send(amount); /* the method socket.send() sends syncronously data to a connected object on the remote host*/
+bytesSent    += socket.Send(name); 
  
-socket.Close(); 
+socket.Close(); /*this method closes the TCP connection*/
