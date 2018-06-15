@@ -38,5 +38,24 @@ At client side we write code to ask the server for  particular resource. The ser
             |       |
             `-.....-
 
+a questo p.to il server risponde reestituendo il codice , se tutto è andato ok, e 
+
+            `-.....-
+            |       |  // client
+            |       |
+            `-.....-
+                |
+                V
+     +----------------------+
+     |                      |
+     |    GET /index.html   |
+     |                      |
+     +----------------------+
+                |
+                V
+            `-.....-
+            |       |  // server
+            |       |
+            `-.....-
 
 ...
