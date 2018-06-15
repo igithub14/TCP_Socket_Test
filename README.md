@@ -19,4 +19,24 @@ Then:
     That is why we need to wrap data inside Messages.
   •  we also need some way to make data format transformations inside the channel, using transformers
   
-  @@@
+After having configured a TCP client/server connection, I whant to implement HTTP Protocol on top of it.
+Note: remember that sockets sit underneath all of the typical internet protocols we use. 
+
+HTTP stays on top of TCP protocol.
+
+At client side we write code to ask the server for  particular resource. The servfer answers retreiving either the response or an error msg.
+        
+     +----------------------+
+     |                      |
+     |    GET /index.html   |
+     |                      |
+     +----------------------+
+                |
+                V
+            `-.....-
+            |       |  // server
+            |       |
+            `-.....-
+
+
+...
