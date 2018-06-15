@@ -1,6 +1,3 @@
-
-Inside the Sokerts folder, we create the file: http:socnet.c
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -21,12 +18,20 @@ int main () {
   char response_data[1024];
   fgets(response_data, 1024, html_data);
   
-  char http_header[1024] = "HTTP/1.1 200 OK\r\n\n"
+  char http_header[1024] = "HTTP/1.1 200 OK\r\n\n"//here  a semcolon needed
   strcat(http_header. response_data);
   
   // create a socket
   int server_socket;
   server_socket = (AF_INET, SOCK_STREAM, 0);
+  
+  // define the address
+  struct sockaddr_in server_address;
+  server_address.sin_family = AF_INET;
+  server_address.sin_port = htons (8001);
+  server_address.sin_addr.s_addr = INADDR_ANY;
+  
+  bind ();
   
   
   //...
