@@ -34,7 +34,8 @@ At client side we write code to ask the server for  particular resource. The ser
                 |
                 V
             `-.....-
-            |       |  // serverhttp_sese
+            |       |  // serverhttp_ses
+            `-.....-
             |       |
             `-.....-
 
@@ -42,6 +43,7 @@ a questo p.to il server risponde reestituendo il codice , se tutto è andato ok,
 
             `-.....-
             |       |  // client
+            `-.....-
             |       |
             `-.....-
                 |
@@ -55,6 +57,7 @@ a questo p.to il server risponde reestituendo il codice , se tutto è andato ok,
                 V
             `-.....-
             |       |  // server
+            `-.....-
             |       |
             `-.....-
 
