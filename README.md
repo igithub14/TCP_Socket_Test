@@ -48,8 +48,8 @@ a questo p.to il server risponde reestituendo il codice , se tutto è andato ok,
                 V
      +----------------------+
      |                      |
-     |    GET /index.html   |
-     |                      |
+     |     200 OK <htm>...  | //the server sends back a status code and some content (if anything was good). 
+     |      ...</html>      |
      +----------------------+
                 |
                 V
