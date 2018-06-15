@@ -34,7 +34,7 @@ At client side we write code to ask the server for  particular resource. The ser
                 |
                 V
             `-.....-
-            |       |  // server
+            |       |  // serverhttp_sese
             |       |
             `-.....-
 
@@ -58,4 +58,7 @@ a questo p.to il server risponde reestituendo il codice , se tutto è andato ok,
             |       |
             `-.....-
 
+Let's implement a http seerver we can access from a web browser and generates html for us. We will make use of sockets for this task. 
+
+Create: Sockets/server.c
 ...
